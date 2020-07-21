@@ -743,7 +743,6 @@
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://github.com/blueimp/JavaScript-MD5/blob/master/js/md5.min.js"></script>
    <script type="text/javascript">
         var gitalk = new Gitalk({
           clientID: 'c854d9c27f3d23c481d5',
@@ -751,10 +750,10 @@
           repo: 'BlogComments',
           owner: 'ChenYuze-JLG',
           admin: ['ChenYuze-JLG'],
-          id: md5(location.pathname),
+          id: location.pathname,
           distractionFreeMode: 'true'
         })
-        gitalk.render('gitalk-container')
+        gitalk.render('gitalk-container')           
        </script>
 
 
