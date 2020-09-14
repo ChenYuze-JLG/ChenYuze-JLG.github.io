@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>操作系统 第二章 操作系统的结构</title>
-    <url>/2020/09/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>默认</category>
-      </categories>
-      <tags>
-        <tag>默认标签</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试文章</title>
     <url>/2020/07/22/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<p>哈哈哈哈哈哈哈哈哈<br>hello</p>
@@ -59,6 +48,124 @@
       <tags>
         <tag>操作系统</tag>
         <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章 操作系统的结构</title>
+    <url>/2020/09/10/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>默认</category>
+      </categories>
+      <tags>
+        <tag>默认标签</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络 第一章 引言</title>
+    <url>/2020/09/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%A8%80/</url>
+    <content><![CDATA[<p>使用教材：<br>计算机网络  第五版<br>作者：Andrew S. Tanenbaum、David J. Wetherall </p>
+<hr>
+<h2 id="使用计算机网络"><a href="#使用计算机网络" class="headerlink" title="使用计算机网络"></a>使用计算机网络</h2><h3 id="商业应用"><a href="#商业应用" class="headerlink" title="商业应用"></a>商业应用</h3><p>计算机的资源共享：让网络中的计算机可以互相访问程序、设备和数据等，且资源与用户所处物理位置无关。<br>虚拟专用网络（VPN，Virtual Private Networks）：将不同地点的单个网络联结成一个扩展的网络———摆脱地理位置的束缚。一般大型公司或机构使用。<br>客户机—服务器模型：高性能的计算机作为服务器，用户使用客户机，服务器和客户机之间使用网络连接。实例：Web应用。<br><img src="%E5%AE%A2%E6%88%B7%E6%9C%BA-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E5%9E%8B.png" alt="" title="书P3"><br>计算机网络提供的通信媒介：电子邮件、IP语音（通过计算机网络打电话）、桌面共享和电子商务。  </p>
+<h3 id="家庭应用"><a href="#家庭应用" class="headerlink" title="家庭应用"></a>家庭应用</h3><h4 id="第一类：获取远程信息-娱乐"><a href="#第一类：获取远程信息-娱乐" class="headerlink" title="第一类：获取远程信息/娱乐"></a>第一类：获取远程信息/娱乐</h4><p>家庭用户采用客户机—服务器模型访问大部分网络信息；<br>另一种模式是对等通信：在一个群体中，每个人都可以与一人或多个人通信，服务器和客户端无固定分工。<br><img src="%E5%AF%B9%E7%AD%89%E9%80%9A%E4%BF%A1.png" alt="" title="书P5"><br>注：在对等系统中，无中央内容数据库；每个用户维护自己的数据库，并为其他成员服务。<br>对等通信常用于共享音乐和视频。  </p>
+<h4 id="第二类：人-人通信"><a href="#第二类：人-人通信" class="headerlink" title="第二类：人-人通信"></a>第二类：人-人通信</h4><p>即时消息：两个人实时输入实时消息；多人参与的消息服务——twitter。<br>远程学习、社交网站（Facebook）、Wiki（协作网站）。  </p>
+<h4 id="第三类：广义电子商务"><a href="#第三类：广义电子商务" class="headerlink" title="第三类：广义电子商务"></a>第三类：广义电子商务</h4><p>家庭购物、电子支付等。  </p>
+<table>
+<thead>
+<tr>
+<th>标题1</th>
+<th>标题2</th>
+<th>标题3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文本好短</td>
+<td>文本不短也不长</td>
+<td>文本好长文本好长文本好长</td>
+</tr>
+<tr>
+<td>文本好长文本好长文本好长</td>
+<td>文本好短</td>
+<td>文本不短也不长</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>标记</th>
+<th>全称</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B2C</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B2B</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>G2C</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C2C</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P2P</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo使用表格</title>
+    <url>/2020/09/14/hexo%E4%BD%BF%E7%94%A8%E8%A1%A8%E6%A0%BC/</url>
+    <content><![CDATA[<h2 id="绘制表格"><a href="#绘制表格" class="headerlink" title="绘制表格"></a>绘制表格</h2><h3 id="句法"><a href="#句法" class="headerlink" title="句法"></a>句法</h3><p>| 分列，- 分行<br>:-: 居中， :- 左对齐， -: 右对齐  </p>
+<blockquote>
+<p>绘制表格时需在表格上方空出一行，否则表格可能无法正确显示。  </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">| Tittle1 | Tittle2 | Tittle3 |</span><br><span class="line">| :------ | :-----: | ------: |</span><br><span class="line">| Content | Content | Content |</span><br><span class="line">| Content | Content | Content |</span><br></pre></td></tr></table></figure>
+
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><table>
+<thead>
+<tr>
+<th align="left">Tittle1</th>
+<th align="center">Tittle2</th>
+<th align="right">Tittle3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Content</td>
+<td align="center">Content</td>
+<td align="right">Content</td>
+</tr>
+<tr>
+<td align="left">Content</td>
+<td align="center">Content</td>
+<td align="right">Content</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
