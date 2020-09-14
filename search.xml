@@ -73,54 +73,35 @@
 <table>
 <thead>
 <tr>
-<th>标题1</th>
-<th>标题2</th>
-<th>标题3</th>
+<th align="center">标记</th>
+<th align="center">全称</th>
+<th align="center">例子</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>文本好短</td>
-<td>文本不短也不长</td>
-<td>文本好长文本好长文本好长</td>
+<td align="center">B2C</td>
+<td align="center">企业对消费者</td>
+<td align="center">在线购书</td>
 </tr>
 <tr>
-<td>文本好长文本好长文本好长</td>
-<td>文本好短</td>
-<td>文本不短也不长</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>标记</th>
-<th>全称</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>B2C</td>
-<td></td>
-<td></td>
+<td align="center">B2B</td>
+<td align="center">企业对企业</td>
+<td align="center">汽车制造商向供应商订购轮胎</td>
 </tr>
 <tr>
-<td>B2B</td>
-<td></td>
-<td></td>
+<td align="center">G2C</td>
+<td align="center">政府对消费者</td>
+<td align="center">政府分发电子税收表单</td>
 </tr>
 <tr>
-<td>G2C</td>
-<td></td>
-<td></td>
+<td align="center">C2C</td>
+<td align="center">消费者对消费者</td>
+<td align="center">在线拍卖二手品</td>
 </tr>
 <tr>
-<td>C2C</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>P2P</td>
-<td></td>
-<td></td>
+<td align="center">P2P</td>
+<td align="center">对等</td>
+<td align="center">音乐共享</td>
 </tr>
 </tbody></table>
 ]]></content>
@@ -137,11 +118,11 @@
     <url>/2020/09/14/hexo%E4%BD%BF%E7%94%A8%E8%A1%A8%E6%A0%BC/</url>
     <content><![CDATA[<h2 id="绘制表格"><a href="#绘制表格" class="headerlink" title="绘制表格"></a>绘制表格</h2><h3 id="句法"><a href="#句法" class="headerlink" title="句法"></a>句法</h3><p>| 分列，- 分行<br>:-: 居中， :- 左对齐， -: 右对齐  </p>
 <blockquote>
-<p>绘制表格时需在表格上方空出一行，否则表格可能无法正确显示。  </p>
+<p><strong>绘制表格时需在表格上方空出一行，否则表格可能无法正确显示。</strong>  </p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">| Tittle1 | Tittle2 | Tittle3 |</span><br><span class="line">| :------ | :-----: | ------: |</span><br><span class="line">| Content | Content | Content |</span><br><span class="line">| Content | Content | Content |</span><br></pre></td></tr></table></figure>
 
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><table>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><table>
 <thead>
 <tr>
 <th align="left">Tittle1</th>
@@ -160,6 +141,21 @@
 <td align="right">Content</td>
 </tr>
 </tbody></table>
+<h2 id="左对齐-居中-右对齐无法正确显示的问题"><a href="#左对齐-居中-右对齐无法正确显示的问题" class="headerlink" title="左对齐/居中/右对齐无法正确显示的问题"></a>左对齐/居中/右对齐无法正确显示的问题</h2><p>无论怎么更改，表格都保持左对齐/居中/右对齐，而网页后台上却表现正常时：<br><img src="%E9%97%AE%E9%A2%98.png" alt="" title="网页显示情况与后台不统一">  </p>
+<blockquote>
+<p>注：本博文使用主题Next（不过主体不同逻辑估计也差不多）  </p>
+</blockquote>
+<p>到<code>themes\next\source\css\_common\scaffolding</code>目录下，<br>打开<code>tables.styl</code>文件，发现文件规定了表格的显示样式。查看文件内容，找到规定表格标题和内容的位置的内容，发现引用了·<code>$table-content-alignment</code>和<code>$table-content-vertical</code>两个变量，分别规定单元格内容的左右和上下位置，因此需找到表格的变量定义处。  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">caption, th, td &#123;</span><br><span class="line">  padding: $table-cell-padding;</span><br><span class="line">  text-align: $table-content-alignment;</span><br><span class="line">  vertical-align: $table-content-vertical;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到<code>themes/next/source/css/_variables</code>目录下<br>打开<code>base.styl</code>文件，发现其中规定了所有变量名及其值；找到与table相关的部分：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Table</span><br><span class="line">&#x2F;&#x2F; --------------------------------------------------</span><br><span class="line">$table-width                    &#x3D; 100%</span><br><span class="line">$table-border-color             &#x3D; $gray-lighter</span><br><span class="line">$table-font-size                &#x3D; 14px</span><br><span class="line">$table-content-alignment        &#x3D; left</span><br><span class="line">$table-content-vertical         &#x3D; middle</span><br><span class="line">$table-th-font-weight           &#x3D; 700</span><br><span class="line">$table-cell-padding             &#x3D; 8px</span><br><span class="line">$table-cell-border-right-color  &#x3D; $gainsboro</span><br><span class="line">$table-cell-border-bottom-color &#x3D; $gray-lighter</span><br><span class="line">$table-row-odd-bg-color         &#x3D; #f9f9f9</span><br><span class="line">$table-row-hover-bg-color       &#x3D; $whitesmoke</span><br></pre></td></tr></table></figure>
+
+<p>将<code>$table-content-alignment = left</code>一行限制了表格的排版方式（罪魁祸首！！！）<br>将此行删除，删除后由于没有了文件规定，故采用默认的排版方式；此时默认排版方式为左对齐，表格的左右对齐可由上述md语句更改。</p>
+<p>更改后：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Table</span><br><span class="line">&#x2F;&#x2F; --------------------------------------------------</span><br><span class="line">$table-width                    &#x3D; 100%</span><br><span class="line">$table-border-color             &#x3D; $gray-lighter</span><br><span class="line">$table-font-size                &#x3D; 14px</span><br><span class="line">$table-content-vertical         &#x3D; middle</span><br><span class="line">$table-th-font-weight           &#x3D; 700</span><br><span class="line">$table-cell-padding             &#x3D; 8px</span><br><span class="line">$table-cell-border-right-color  &#x3D; $gainsboro</span><br><span class="line">$table-cell-border-bottom-color &#x3D; $gray-lighter</span><br><span class="line">$table-row-odd-bg-color         &#x3D; #f9f9f9</span><br><span class="line">$table-row-hover-bg-color       &#x3D; $whitesmoke</span><br></pre></td></tr></table></figure>
+
+<p>表格其他设置或博客其他组件如需自定义同理。</p>
 ]]></content>
       <categories>
         <category>hexo</category>
