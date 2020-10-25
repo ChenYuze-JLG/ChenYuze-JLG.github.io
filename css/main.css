@@ -418,7 +418,7 @@ caption,
 th,
 td {
   padding: 8px;
-  text-align: left;
+  text-align: $table-content-alignment;
   vertical-align: middle;
   font-weight: normal;
 }
@@ -1862,7 +1862,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7795a1;
+  background: #0e5e4e;
 }
 .links-of-blogroll {
   font-size: 13px;
